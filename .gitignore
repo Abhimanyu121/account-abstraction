@@ -2,10 +2,8 @@ node_modules
 
 #Hardhat files
 cache
-artifacts
 /.idea/
 /typechain/
-/dist/
 /yarn-error.log
 /deployments/dev/
 /deployments/localhost/
