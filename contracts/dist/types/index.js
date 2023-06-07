@@ -11,7 +11,7 @@ var __createBinding = (this && this.__createBinding) || (Object.create ? (functi
     o[k2] = m[k];
 }));
 exports.__esModule = true;
-exports.VerifyingPaymaster__factory = exports.TokenPaymaster__factory = exports.TokenCallbackHandler__factory = exports.StakeManager__factory = exports.SimpleAccountFactory__factory = exports.SimpleAccount__factory = exports.SenderCreator__factory = exports.NonceManager__factory = exports.MaliciousAccount__factory = exports.IStakeManager__factory = exports.IPaymaster__factory = exports.INonceManager__factory = exports.IEntryPoint__factory = exports.IAggregator__factory = exports.IAccount__factory = exports.GnosisSafeAccountFactory__factory = exports.EntryPoint__factory = exports.EIP4337Manager__factory = exports.EIP4337Fallback__factory = exports.DepositPaymaster__factory = exports.BrokenBLSAccountFactory__factory = exports.BrokenBLSAccount__factory = exports.BasePaymaster__factory = exports.BaseAccount__factory = exports.factories = void 0;
+exports.VerifyingPaymaster__factory = exports.TokenPaymaster__factory = exports.TokenCallbackHandler__factory = exports.StakeManager__factory = exports.SimpleAccountFactory2__factory = exports.SimpleAccountFactory__factory = exports.SimpleAccount__factory = exports.SenderCreator__factory = exports.NonceManager__factory = exports.MaliciousAccount__factory = exports.IStakeManager__factory = exports.IPaymaster__factory = exports.INonceManager__factory = exports.IEntryPoint__factory = exports.IAggregator__factory = exports.IAccount__factory = exports.GnosisSafeAccountFactory__factory = exports.EntryPoint__factory = exports.EIP4337Manager__factory = exports.EIP4337Fallback__factory = exports.DepositPaymaster__factory = exports.BrokenBLSAccountFactory__factory = exports.BrokenBLSAccount__factory = exports.BasePaymaster__factory = exports.BaseAccount__factory = exports.factories = void 0;
 exports.factories = require("./factories");
 var BaseAccount__factory_1 = require("./factories/BaseAccount__factory");
 __createBinding(exports, BaseAccount__factory_1, "BaseAccount__factory");
@@ -53,6 +53,8 @@ var SimpleAccount__factory_1 = require("./factories/SimpleAccount__factory");
 __createBinding(exports, SimpleAccount__factory_1, "SimpleAccount__factory");
 var SimpleAccountFactory__factory_1 = require("./factories/SimpleAccountFactory__factory");
 __createBinding(exports, SimpleAccountFactory__factory_1, "SimpleAccountFactory__factory");
+var SimpleAccountFactory2__factory_1 = require("./factories/SimpleAccountFactory2__factory");
+__createBinding(exports, SimpleAccountFactory2__factory_1, "SimpleAccountFactory2__factory");
 var StakeManager__factory_1 = require("./factories/StakeManager__factory");
 __createBinding(exports, StakeManager__factory_1, "StakeManager__factory");
 var TokenCallbackHandler__factory_1 = require("./factories/TokenCallbackHandler__factory");

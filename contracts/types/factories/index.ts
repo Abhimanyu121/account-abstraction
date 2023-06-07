@@ -21,6 +21,7 @@ export { NonceManager__factory } from "./NonceManager__factory";
 export { SenderCreator__factory } from "./SenderCreator__factory";
 export { SimpleAccount__factory } from "./SimpleAccount__factory";
 export { SimpleAccountFactory__factory } from "./SimpleAccountFactory__factory";
+export { SimpleAccountFactory2__factory } from "./SimpleAccountFactory2__factory";
 export { StakeManager__factory } from "./StakeManager__factory";
 export { TokenCallbackHandler__factory } from "./TokenCallbackHandler__factory";
 export { TokenPaymaster__factory } from "./TokenPaymaster__factory";
