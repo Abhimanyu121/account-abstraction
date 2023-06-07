@@ -1,5 +1,5 @@
 {
-  "name": "epoch-accountabstraction/contracts",
+  "name": "epochaccountabstractioncontracts",
   "description": "Account Abstraction (EIP 4337) contracts",
   "version": "0.6.0",
   "main": "./dist/index.js",

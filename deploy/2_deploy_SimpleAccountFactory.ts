@@ -14,12 +14,22 @@ const deploySimpleAccountFactory: DeployFunction = async function (hre: HardhatR
   const entrypoint = await hre.deployments.get('EntryPoint')
   const ret = await hre.deployments.deploy(
     'SimpleAccountFactory', {
-      from,
-      args: [entrypoint.address],
-      gasLimit: 6e6,
-      log: true,
-      deterministicDeployment: true
-    })
+    from,
+    args: [entrypoint.address],
+    gasLimit: 6e6,
+    log: true,
+    deterministicDeployment: true
+  })
+  console.log('==SimpleAccountFactory addr=', ret.address)
+
+  const ret2 = await hre.deployments.deploy(
+    'SimpleAccountFactory2', {
+    from,
+    args: [entrypoint.address],
+    gasLimit: 6e6,
+    log: true,
+    deterministicDeployment: true
+  })
   console.log('==SimpleAccountFactory addr=', ret.address)
 }
 
