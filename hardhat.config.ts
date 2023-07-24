@@ -8,18 +8,17 @@ import 'solidity-coverage'
 
 import * as fs from 'fs'
 
-const mnemonicFileName = process.env.MNEMONIC_FILE ?? `${process.env.HOME}/.secret/testnet-mnemonic.txt`
+const mnemonicFileName = process.env.MNEMONIC_FILE ?? `./mnemonic.txt`
 let mnemonic = 'test '.repeat(11) + 'junk'
 if (fs.existsSync(mnemonicFileName)) { mnemonic = fs.readFileSync(mnemonicFileName, 'ascii') }
-
-function getNetwork1 (url: string): { url: string, accounts: { mnemonic: string } } {
+function getNetwork1(url: string): { url: string, accounts: { mnemonic: string } } {
   return {
     url,
     accounts: { mnemonic }
   }
 }
 
-function getNetwork (name: string): { url: string, accounts: { mnemonic: string } } {
+function getNetwork(name: string): { url: string, accounts: { mnemonic: string } } {
   return getNetwork1(`https://${name}.infura.io/v3/${process.env.INFURA_ID}`)
   // return getNetwork1(`wss://${name}.infura.io/ws/v3/${process.env.INFURA_ID}`)
 }
@@ -54,6 +53,7 @@ const config: HardhatUserConfig = {
     localgeth: { url: 'http://localgeth:8545' },
     goerli: getNetwork('goerli'),
     sepolia: getNetwork('sepolia'),
+    mumbai: { url: 'https://rpc.ankr.com/polygon_mumbai', accounts: { mnemonic } },
     proxy: getNetwork1('http://localhost:8545')
   },
   mocha: {
@@ -61,7 +61,7 @@ const config: HardhatUserConfig = {
   },
 
   etherscan: {
-    apiKey: process.env.ETHERSCAN_API_KEY
+    apiKey: process.env.ETHERSCAN_API_KEY ?? "EEGAHTH42UJXXTB3X1T5J5U7W8IGPUVSHB"
   }
 
 }
